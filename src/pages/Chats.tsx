@@ -1,12 +1,9 @@
-import React, { FC, useCallback, Suspense, useEffect, useState } from 'react';
-import { Form } from './components/Form/Form';
-import { MessageList } from './components/MessageList/MessageList';
+import React, { FC, useCallback, useEffect, useState } from 'react';
+import { Form } from '../components/Form/Form';
+import { MessageList } from '../components/MessageList/MessageList';
 import { nanoid } from 'nanoid';
 import './index.css';
-import List from './components/List/List';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { Profile } from './pages/Profile';
-
+import List from '../components/List/List';
 
 export interface Message {
   id: string;
@@ -58,7 +55,6 @@ export const App: FC = () => {
 
   return (
     <>
-  
       <div className='bg'>
         <p className='header'>Welcome to the ReaChat</p>
 
@@ -71,7 +67,6 @@ export const App: FC = () => {
           <List />
         </div>
       </div>
-   
     </>
   );
 };
